@@ -8,8 +8,11 @@ class Student
     private string $name;
     private \DateTimeInterface $birthDate;
 
-    public function __construct(?int $id, string $name, \DateTimeInterface $birthDate)
-    {
+    public function __construct(
+        ?int $id,
+        string $name,
+        \DateTimeInterface $birthDate
+    ) {
         $this->id = $id;
         $this->name = $name;
         $this->birthDate = $birthDate;
@@ -32,8 +35,6 @@ class Student
 
     public function age(): int
     {
-        return $this->birthDate
-            ->diff(new \DateTimeImmutable())
-            ->y;
+        return $this->birthDate->diff(new \DateTimeImmutable())->y;
     }
 }
