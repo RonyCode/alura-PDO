@@ -1,10 +1,14 @@
 <?php
 
-$caminhoBanco = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $caminhoBanco);
+require "vendor/autoload.php";
 
-echo 'Conectei';
+$databasePath = __DIR__ . '/banco.sqlite';
+$pdo = new PDO('sqlite:' . $databasePath);
 
 $pdo->exec(
-    'CREATE TABLE stundens{id INTEGER PRIMARY KEY, name TEXT, birth_date TEXT}'
+    'CREATE TABLE students(id INTEGER PRIMARY KEY, name TEXT, birth_date TEXT);'
 );
+
+var_dump($pdo) . PHP_EOL;
+
+echo 'Conectei';

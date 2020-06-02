@@ -1,20 +1,19 @@
 <?php
 
-use Alura\Pdo\Domain\Model\Student;
-
 require "vendor/autoload.php";
 
-$caminhoBanco = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $caminhoBanco);
+use Alura\Pdo\Domain\Model\Student;
+
+$databasePath = __DIR__ . '/banco.sqlite';
+$pdo = new PDO('sqlite:' . $databasePath);
 
 $student = new Student(
     null,
     'Rony Anderson',
-    new \DateTimeImmutable('1997-10-15')
+    new \DateTimeImmutable('1986-02-17')
 );
-$sqlInsert = "INSERT INTO studens (name, birth_date) VALUES ('{$student->name()}')','{$student->birthDate()->format(
+$sqlInsert = "INSERT INTO students (name, birth_date) VALUES ('{$student->name()}', '{$student->birthDate()->format(
     'Y-m-d'
 )}');";
-var_dump($pdo->exec($sqlInsert));
 
-echo $sqlInsert;
+var_dump($pdo->exec($sqlInsert));
