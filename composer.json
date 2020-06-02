@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Alura\\Pdo\\": "src"
+            "Alura\\Pdo\\": "src/"
         }
     }
 }
