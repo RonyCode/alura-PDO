@@ -1,7 +1,19 @@
 {
+    "name": "ronycode/alura-pdo",
+    "description": "Aula de pdo com php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rony Anderson",
+            "email": "ronypc@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
     "autoload": {
         "psr-4": {
-            "Alura\\Pdo\\": "src/"
+            "Alura\\Pdo\\": "src"
         }
     }
 }
