@@ -9,8 +9,8 @@ $pdo = new PDO('sqlite:' . $databasePath);
 
 $student = new Student(
     null,
-    "Denis Robson",
-    new \DateTimeImmutable('1986-10-25')
+    "Gisele Pereira",
+    new \DateTimeImmutable('1985-09-07')
 );
 $name = $student->name();
 
