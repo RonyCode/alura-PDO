@@ -1,16 +1,15 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use ALura\Pdo\Infrastructure\Persistence\ConnectionCreator;
 
 require_once "vendor/autoload.php";
 
-$pdo = ConnectionCreator::createConnection();
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 $statement = $pdo->query("SELECT * FROM students;");
 $studentDataList = $statement->fetchALL(PDO::FETCH_ASSOC);
 
-$studantList = [];
+$studentList = [];
 
 foreach ($studentDataList as $studentData) {
     $studentList[] = new Student(
