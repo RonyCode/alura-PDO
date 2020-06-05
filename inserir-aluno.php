@@ -8,7 +8,7 @@ $pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection
 
 $student = new Student(
     null,
-    "Gisele Pereira",
+    "Giselasdasd Pereirsdfsd",
     new \DateTimeImmutable('1985-09-07')
 );
 $name = $student->name();

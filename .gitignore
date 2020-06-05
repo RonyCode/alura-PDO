@@ -1,3 +1,6 @@
 .idea
 vendor
 banco.sqlite
+package-lock.json
+node_modules
+.vscode
